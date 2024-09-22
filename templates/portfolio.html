@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farhan | Web Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(8, 2, 48);
+            color: #fff;
+        }
+
+        header {
+            background-color: #042256;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .head {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: blueviolet;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            margin: 80px 0;
+            padding: 0 10%;
+        }
+
+        .firstsection>.left-content {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 3rem;
+            color: #fff;
+            text-align: left;
+            margin-bottom: 20px;
+            flex: 0 0 70%;
+        }
+
+        .firstsection>.right-content {
+            flex: 0 0 30%;
+        }
+
+        .firstsection>.right-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        #element {
+            color: blueviolet;
+        }
+
+        main hr {
+            border: 0;
+            background: #8aa5c9;
+            height: 1.5px;
+            margin: 20px 10%;
+        }
+
+        .head h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 15px 10%;
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .section2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            gap: 20px;
+            padding: 0 10%;
+        }
+
+        .secondleft {
+            flex: 0 0 30%;
+        }
+
+        .secondleft img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .secondright {
+            flex: 0 0 70%;
+            color: white;
+            font-size: 1.2rem;
+            max-width: 600px;
+            padding-left: 20px;
+            /* Reduced the gap between image and text */
+        }
+
+        .rem {
+            color: blueviolet;
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .secondbottom {
+            margin-top: 30px;
+            color: white;
+            font-size: 1.6rem;
+        }
+
+        .secondbottom div {
+            margin-top: 15px;
+        }
+
+        .section3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px 0;
+            padding: 0 10%;
+        }
+
+        .sec3h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #fff;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .work-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .work-item {
+            flex: 1 1 250px;
+            max-width: 300px;
+            overflow: hidden;
+            /* Ensures any overflow is hidden */
+            position: relative;
+            /* Required for absolute positioning */
+        }
+
+        .work-item video {
+            width: 100%;
+            /* Make video take full width */
+            height: auto;
+            /* Maintain aspect ratio */
+            border-radius: 10px;
+            /* Optional: to match the other items */
+        }
+
+        .work-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .section5 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+            padding: 20px;
+            background-color: rgb(8, 2, 48);
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .resume-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .resume-text {
+            margin-right: 20px;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 2rem;
+        }
+
+        .resume-download button {
+            background-color: blueviolet;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .resume-download button:hover {
+            background-color: darkviolet;
+        }
+
+        .contact-title {
+            width: 100%;
+            color: white;
+            font-size: 2rem;
+            margin-top: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .main-area {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 0 10%;
+            flex-wrap: wrap;
+        }
+
+        .contact img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .contact-form {
+            flex: 1 1 400px;
+            max-width: 500px;
+        }
+
+        .contact-form form {
+            background: none;
+            width: 100%;
+        }
+
+        .contact-form form input,
+        .contact-form form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            font-size: 1rem;
+        }
+
+        .contact-form form input[type="submit"] {
+            background-color: blueviolet;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form form input[type="submit"]:hover {
+            background-color: darkviolet;
+        }
+
+        footer {
+            background-color: #042256;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: blueviolet;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header .head {
+                margin-bottom: 10px;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .firstsection {
+                margin: 40px 0;
+                padding: 0 5%;
+            }
+
+            .firstsection>.left-content {
+                font-size: 2.5rem;
+                margin-top: 50px;
+            }
+
+            .firstsection>.right-content img {
+                margin-top: 50px;
+            }
+
+            .section2 {
+                flex-direction: column;
+                padding: 0 5%;
+            }
+
+            .section2 .secondright {
+                text-align: center;
+                padding-left: 0;
+                /* Ensure no padding on mobile */
+            }
+
+            .work-container {
+                justify-content: center;
+                margin: 0 5%;
+            }
+
+            .section5 {
+                flex-direction: column;
+            }
+
+            .resume-text {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+                .section2 {
+                    flex-direction: column;
+                    /* Stack the image and text vertically on medium screens */
+                    align-items: center;
+                    /* Center the content */
+                }
+
+                .secondleft img {
+                    max-width: 70%;
+                    /* Adjust the size of the image for this screen size */
+                    margin-bottom: 20px;
+                    /* Adds space below the image */
+                }
+
+                .secondright {
+                    text-align: center;
+                    /* Centers the text on medium screens */
+                }
+            }
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <p>Farhan's Portfolio</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="left-content">
+                I am <span class="purple">Farhan</span> and I am a dedicated individual passionate about
+                <span id="element"></span>
+            </div>
+            <div class="right-content">
+                <img src="{{ url_for('static', filename='images/dvlpr (2).png') }}" alt="Image">
+            </div>
+        </section>
+        <hr>
+        <div class="head">
+            <h1>About me</h1>
+        </div>
+        <section class="section2" id="about">
+            <div class="secondleft">
+                <img src="{{ url_for('static', filename='images/Designer (1).png') }}" alt="Image">
+            </div>
+            <div class="secondright">
+                <span class="rem">I'm Farhan</span>, a highly skilled and passionate web developer with a robust
+                background in web development, graphic design, blog writing, and video editing.
+                <div class="secondbottom">
+                    <div>My Expertise</div>
+                    <div>Web Development: I specialize in creating fast, responsive, and visually appealing websites. My
+                        extensive experience with HTML, CSS, JavaScript, and modern frameworks ensures that every
+                        website I build is optimized for speed and user experience.</div>
+                    <div>Graphic Design: My graphic design skills allow me to create unique and eye-catching designs
+                        that enhance the visual appeal of websites and other digital projects.</div>
+                    <div>Blog Writing: I have a knack for writing engaging and informative blog posts, helping
+                        businesses communicate effectively with their audience.</div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section2hr">
+        <section class="section3" id="portfolio">
+            <h1 class="sec3h1">My Work</h1>
+            <div class="work-container">
+                <div class="work-item">
+                    <video controls autoplay muted>
+                        <source src="{{ url_for('static', filename='videos/vid1.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+                <div class="work-item">
+                    <img src="{{ url_for('static', filename='images/work1.png') }}" alt="Image">
+                </div>
+                <div class="work-item">
+                    <img src="{{ url_for('static', filename='images/work2.png') }}" alt="Image">
+                </div>
+                <div class="work-item">
+                    <video controls autoplay muted>
+                        <source src="{{ url_for('static', filename='videos/vid2.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="section5">
+            <div class="resume-container">
+                <div class="resume-text">Download My Resume</div>
+                <div class="resume-download">
+                    <button onclick="window.location.href='{{ url_for('static', filename='resume.pdf') }}'">Download</button>
+
+                </div>
+            </div>
+        </section>
+        <hr>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <ul>
+          {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+  
+        <section class="section4" id="contact">
+            <div class="contact-title">Contact Me</div>
+            <div class="main-area">
+                <div class="contact">
+                    <img src="{{ url_for('static', filename='images/contact.png') }}" alt="Contact Image">
+                </div>
+                <div class="contact-form">
+                    <form action="{{ url_for('contact') }}" method="post">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <input type="submit" value="Send Message">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Farhan's Portfolio. All Rights Reserved.</p>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </footer>
+
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Development.', 'Graphic Design.', 'Blog Writing.', 'Video Editing.'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
